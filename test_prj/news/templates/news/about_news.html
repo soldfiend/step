@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+{% block title %}About{% endblock %}
+{% block body %}
+<center>
+    <div class="">
+        <div class="article">
+        <h2>{{ articles.name }}</h2><br>
+        </div>
+        <div class="full">
+        <h4>{{ articles.full_text }}</h4><br>
+        <h6>{{ articles.data }}<h6><br>
+        </div>
+        <span>
+            <a href="{% url 'delete' articles.pk %}"><button class="btn btn-danger">Удалить</button></a>
+            <a href="{% url 'update' articles.pk %}"><button class="btn btn-info">Изменить</button></a>
+        </span>
+    </div>
+
+</center>
+{% endblock %}

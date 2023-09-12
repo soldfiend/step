@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% block title %}Delete{% endblock %}
+{% block body %}
+
+<center>
+    <div class="delete">
+        <form method="post">
+            {% csrf_token %}
+
+            <button class="btn btn-warning" type="submit">Удалить</button>
+
+        </form>
+    </div>
+
+
+
+
+
+</center>
+{% endblock %}
+

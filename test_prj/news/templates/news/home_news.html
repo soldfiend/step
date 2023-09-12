@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}News{% endblock %}
+{% block body %}
+
+<center>
+    <h1>News</h1>
+            {% if news %}
+                {% for new in news %}
+                    <div class="news">
+                        <h2>Name state: {{ new.name }}</h2>
+                        <h4>Anons: {{ new.anons }}</h4>
+                        <p>Data :{{ new.data }}</p>
+                        <a class="btn btn-success" href="{% url 'news-detail' new.id %}">Перейти к новости</a>
+
+
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Not news</p>
+            {% endif %}
+
+</center>
+
+{% endblock %}

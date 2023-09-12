@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+{% block title %}Add news{% endblock %}
+{% block body %}
+
+<center>
+    <div class="add_news">
+        <form method="post">
+
+            {% csrf_token %}
+            {{ form.name }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.data }}<br>
+            <button class="btn btn-warning" type="submit">Добавить</button>
+            <span>{{ error }}</span>
+        </form>
+    </div>
+
+            <!--        <input type="text" class="form-control" placeholder="Название статьи"><br><br>-->
+            <!--        <input type="text" class="form-control" placeholder="Анонс статьи"><br><br>-->
+            <!--        <input type="text" class="form-control" placeholder="Текст статьи"><br><br>-->
+            <!--        <input type="date" class="form-control" placeholder="Дата статьи"><br><br>-->
+
+
+
+
+</center>
+{% endblock %}
+
